@@ -3,9 +3,9 @@
  */
 var befoerScroll = 0;
 $(window).load(function () {
-
     Carousel.init($(".J_Poster"));
     scroll();
+    mytimer(2016,3,10,0,0,0);
 });
 
 function scroll() {
@@ -273,3 +273,36 @@ Carousel.prototype = {
         }, self.setting.delay);
     }
 };
+function mytimer(y,mt,d,h,m,s){//倒计时效果
+    var timer=null,
+        second=0,//设置默认时间
+        day=0,
+        hour=0,
+        minute=0;
+    timer=setInterval(function(){
+        var endTime= new Date(y,mt-1,d,h,m,s),
+            startTime=new Date();
+            second=Math.floor((endTime.getTime()-startTime.getTime())/1000);
+        if(second > 0){
+            day = Math.floor(second / (60 * 60 * 24));
+            hour = Math.floor(second / (60 * 60)) - (day * 24);
+            minute = Math.floor(second / 60) - (day * 24 * 60) - (hour * 60);
+            second = Math.floor(second) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+        }else{
+            clearInterval(timer);
+            $(".time-end").css({
+                display:"inline-block"
+            });
+        }
+        if (minute <= 9){
+            minute = '0' + minute;
+        }
+        if (second <= 9) {
+            second = '0' + second;
+        }
+        $('#day-show').text(day+'天');
+        $('#hour-show').text(hour+'时');
+        $('#minute-show').text(minute+'分');
+        $('#second-show').text(second+'秒');
+    }, 1000);
+}
