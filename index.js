@@ -2,10 +2,12 @@
  * Created by jiahao on 2016/2/29.
  */
 var befoerScroll = 0;
+var land=null;
 $(window).load(function () {
     Carousel.init($(".J_Poster"));
     scroll();
     mytimer(2016,3,10,0,0,0);
+    land=new land();
 });
 
 function scroll() {

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="jquery-2.2.0.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="index.js" type="text/javascript"   ></script>
+    <script src="land.js" type="text/javascript"></script>
+    <title>shopping</title>
+</head>
+<body>
+<div class="head-top">
+    <div class="head-top-nav">
+        <div class="head-top-nav-content">
+            <em style="float:left;">欢迎光临！只有想不到，没有买不到</em>
+                <span class='head-top-nav-span1'>
+                    <a href='javaScript:void(0);' class='land-button land-button1' >登陆</a>
+                    <a style='float:right;'  href='javaScript:void(0);' class='register'>注册</a>
+                </span>
+                <span class="head-top-nav-span2">
+                    <a class='personCenter' style='color:#f10582;'></a>
+                    <a href='javaScript:land.signOut();' class='closePersonCenter' >退出</a>
+                </span>
+        </div>
+    </div>
+    <div class="head-top-content">
+        <div class="mylogo">
+            <a href="#" class="logo-a">
+                <div>
+                    <h1>屌丝商城</h1>
+
+                    <h2>一家只卖高大上产品的商城</h2>
+                </div>
+            </a>
+        </div>
+        <div class="shopping-car">
+            <i class="shopping-car-pic"></i>
+            <span class="shopping-car-numbers">0</span>
+            <a class="shopping-car-text">我的购物车</a>
+        </div>
+        <div class="head-top-pic">
+            <a href="#"><img src="img/headpic1.jpg"></a>
+            <a href="#"><img src="img/headpic2.png"></a>
+            <a href="#"><img src="img/headpic3.png"></a>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-default"
+     style="color:#fff;background-color: #f10582;border-radius: 0;border: 0;position:relative;">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand" href="#">Brand</a>-->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="navbar-nav">
+                <li><a href="#"
+                       style="color:#fff;font-size:16px;width:80px;text-align: center;background-color: #bd1067">首页<span
+                        class="sr-only">(current)</span></a></li>
+                <li><a href="#" style="color:#fff; font-size:16px;width:80px;text-align: center;">飞机</a></li>
+                <li><a href="#" style="color:#fff;font-size:16px;width:80px;text-align: center;">坦克</a></li>
+                <li><a href="#" style="color:#fff;font-size:16px;width:80px;text-align: center;">大炮</a></li>
+                <li><a href="#" style="color:#fff;font-size:16px;width:80px;text-align: center;">超跑</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form class="navbar-form" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+</body>
+</html>
